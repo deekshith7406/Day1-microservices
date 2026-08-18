@@ -1,0 +1,12 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: order-service
+
+# Kept as external configuration (not hard-coded in the client class),
+# per the handbook's "keep the User Service base URL configurable" requirement.
+# Override with: --user-service.base-url=http://other-host:8089
+user-service:
+  base-url: http://localhost:9089
