@@ -18,8 +18,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    // GET /api/orders/{id}
-    // Internally calls User Service over HTTP to enrich the response with user info.
+ 
     @GetMapping("/{id}")
     public ResponseEntity<OrderResponseDto> getOrder(@PathVariable Long id) {
         OrderResponseDto response = orderService.getOrderById(id);
